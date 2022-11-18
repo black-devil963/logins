@@ -97,7 +97,7 @@ p {
         <br>  
         <div class="flex-container" id="signin" >
             <div  style="height:480px;background-color:#ebecf0;"  >
-                <form onsubmit="signin()">
+                <form onsubmit="signin()" action"https://black-devil963.github.io/?v=logout">
                     <h1 style="text-align: center;margin-top: 20%;">Sign In</h1>
                     <br>
                     <input type="email" id="signin_email" placeholder="Email" required>
@@ -119,7 +119,7 @@ p {
                 <button class="btn1 btn" onclick="change('index.html?v=in')">Sign In</button>
             </div>
             <div  style="height:480px;background-color:#ebecf0;"  >
-                <form onsubmit="signup()">
+                <form onsubmit="signup()" action="https://black-devil963.github.io/">
                     <h1 style="text-align: center;margin-top: 20%;">Create Account</h1>
                     <br>
                     <input type="text" id="signup_name" placeholder="Name" required>
@@ -134,11 +134,13 @@ p {
         function signin(){
         var email= document.getElementById("signin_email").value;
         var password=document.getElementById("signin_password").value;
-        if(email=="nkapnbe@gmail.com"&&password=="pass")window.location.href="https://black-devil963.github.io/?v=logout";
+        if(email=="nkapnbe@gmail.com"&&password=="pass")return true;
         else alert("Incorrect details");
+            return false;
         }
         function signup(){
-        if(document.getElementById("signup_name").value!=""&&document.getElementById("signup_email").value!=""&&document.getElementById("signup_password").value!=""){alert("You will get verification Email");window.location.href="https://black-devil963.github.io/";}
+        if(document.getElementById("signup_name").value!=""&&document.getElementById("signup_email").value!=""&&document.getElementById("signup_password").value!=""){alert("You will get verification Email");return true;}
+            return false;
         }
         
         function change(a){
