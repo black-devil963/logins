@@ -97,12 +97,12 @@ p {
         <br>  
         <div class="flex-container" id="signin" >
             <div  style="height:480px;background-color:#ebecf0;"  >
-                <form>
+                <form onsubmit="signin()">
                     <h1 style="text-align: center;margin-top: 20%;">Sign In</h1>
                     <br>
                     <input type="email" id="signin_email" placeholder="Email" required>
                     <input type="password" id="signin_password" placeholder="Password" required>
-                    <input class="btn2 btn" type="button" onsubmit="signin()" value="SignIn">
+                    <input class="btn2 btn" type="button"  value="SignIn">
                 </form>
             </div>
             <div style="height:480px;background-color:#ff4b2b"  >
@@ -119,13 +119,13 @@ p {
                 <button class="btn1 btn" onclick="change('index.html?v=in')">Sign In</button>
             </div>
             <div  style="height:480px;background-color:#ebecf0;"  >
-                <form>
+                <form onsubmit="signup()">
                     <h1 style="text-align: center;margin-top: 20%;">Create Account</h1>
                     <br>
                     <input type="text" id="signup_name" placeholder="Name" required>
                     <input type="email" id="signup_email" placeholder="Email" required>
                     <input type="password" id="signup_password"placeholder="Password" required>
-                    <input class="btn2 btn" type="button" onsubmit="signup()" value="Sign Up">
+                    <input class="btn2 btn" type="button"  value="Sign Up">
                   </form>
             </div> 
         </div>
